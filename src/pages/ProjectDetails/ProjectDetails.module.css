@@ -1,0 +1,193 @@
+/* src/pages/ProjectDetail/ProjectDetail.module.css */
+.projectDetailSection {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.imageContainer {
+    margin-bottom: 2rem;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detailsContent {
+    text-align: left;
+    /* Align text within details to left for readability */
+    padding: 0 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.techStack {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.techStack h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    /* Center the tech tags */
+}
+
+.techTag {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid #dee2e6;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.liveLink,
+.githubLink {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.liveLink {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.liveLink:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.githubLink {
+    background-color: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+}
+
+.githubLink:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.backButton {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #e2f0ff;
+    transform: translateY(-2px);
+}
+
+.notFound {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5rem;
+    color: #dc3545;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.notFound h2 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+}
+
+.notFound p {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projectDetailSection {
+        padding: 2rem 0.5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .liveLink,
+    .githubLink {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .techStack h3 {
+        font-size: 1.4rem;
+    }
+}

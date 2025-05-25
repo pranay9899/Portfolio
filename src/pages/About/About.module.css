@@ -1,0 +1,82 @@
+/* src/pages/About/About.module.css */
+/* Styles for the About Me page. */
+
+.aboutSection {
+    padding: 3rem 1rem;
+    /* Adjust padding as needed */
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* Space between profile info and skills */
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+}
+
+.profileInfo {
+    text-align: center;
+}
+
+.profileImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* Circular image */
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 5px solid #007bff;
+    /* Border around image */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    /* Soft shadow for image */
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    /* Align text to left for readability */
+}
+
+.bio:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .contentWrapper {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .profileImage {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}

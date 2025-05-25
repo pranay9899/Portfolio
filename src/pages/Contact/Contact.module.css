@@ -1,0 +1,182 @@
+/* src/pages/Contact/Contact.module.css */
+/* Styles for the Contact Me page, including the form and contact details. */
+
+.contactSection {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.contactContent {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    gap: 3rem;
+    /* Space between form and info */
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+}
+
+.contactForm {
+    flex: 2;
+    /* Form takes more space */
+    min-width: 300px;
+    /* Minimum width for form */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.inputField,
+.textareaField {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputField:focus,
+.textareaField:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.textareaField {
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
+}
+
+.submitButton {
+    background-color: #28a745;
+    /* Green submit button */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.submitButton:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+.statusMessage {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #28a745;
+    /* Success message color */
+}
+
+.contactInfo {
+    flex: 1;
+    /* Info section takes less space */
+    min-width: 250px;
+    /* Minimum width for info */
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    /* Light grey background */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactInfo h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contactInfo p {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 0.8rem;
+}
+
+.contactInfo p a {
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-all;
+    /* Helps with long email/link strings */
+}
+
+.contactInfo p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .contactContent {
+        flex-direction: column;
+        /* Stack form and info vertically */
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .contactForm,
+    .contactInfo {
+        min-width: unset;
+        /* Remove min-width to allow full width */
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .submitButton {
+        width: 100%;
+    }
+}

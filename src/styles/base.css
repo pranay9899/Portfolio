@@ -1,0 +1,71 @@
+/* src/styles/base.css */
+/* This file contains global CSS styles, resets, and base typography. */
+
+/* Universal Box-Sizing for consistent layout */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base HTML and Body Styles */
+html {
+    font-size: 16px;
+    /* Defines 1rem for responsive sizing */
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Using Inter font as requested */
+    color: #333;
+    /* Default text color */
+    background-color: #f8f9fa;
+    /* Light background color */
+    -webkit-font-smoothing: antialiased;
+    /* Improves font rendering on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;
+    /* Improves font rendering on Firefox */
+}
+
+/* Basic Link Styling */
+a {
+    color: #007bff;
+    /* Default link color */
+    text-decoration: none;
+    /* No underline by default */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Utility classes for centering and spacing */
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* Horizontal padding for smaller screens */
+}
+
+/* Optional: Hide scrollbar for elements if you want, but generally not recommended */
+/* html {
+  scrollbar-width: none; // Firefox
+}
+html::-webkit-scrollbar {
+  display: none; // Chrome, Safari, Edge
+} */

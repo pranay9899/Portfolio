@@ -1,0 +1,91 @@
+/* src/components/Skills/Skills.module.css */
+/* Styles for the skills section. */
+
+.skillsContainer {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skillsHeading {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid for categories */
+    gap: 1.5rem;
+}
+
+.categoryCard {
+    background-color: #f0f4f8;
+    /* Light grey background for each category */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryTitle {
+    font-size: 1.4rem;
+    color: #007bff;
+    /* Highlight color for category titles */
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.skillList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    /* Space between skill items */
+    justify-content: center;
+    /* Center skills within the card */
+}
+
+.skillItem {
+    background-color: #e9ecef;
+    /* Light background for individual skills */
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid #dee2e6;
+    /* Subtle border */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skillsHeading {
+        font-size: 1.8rem;
+    }
+
+    .skillsGrid {
+        grid-template-columns: 1fr;
+        /* Single column on small screens */
+    }
+
+    .categoryTitle {
+        font-size: 1.2rem;
+    }
+
+    .skillItem {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

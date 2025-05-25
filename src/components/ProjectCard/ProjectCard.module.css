@@ -1,0 +1,199 @@
+/* src/components/ProjectCard/ProjectCard.module.css */
+/* Styles for the individual project cards. */
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    /* More rounded corners */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    /* Softer, larger shadow */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensures all cards in a grid have equal height */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transitions */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    /* Lift card on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    /* More prominent shadow on hover */
+}
+
+.image {
+    width: 100%;
+    height: 220px;
+    /* Slightly increased image height for better visual */
+    object-fit: cover;
+    /* Ensures image covers the area, cropping if necessary */
+    border-bottom: 1px solid #eee;
+}
+
+.content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allows content area to expand to fill remaining space */
+}
+
+.title {
+    font-size: 1.7rem;
+    /* Slightly adjusted font size */
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    /* Allows description to take up available space */
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    /* Slightly more space between tags */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    /* Center the tech tags */
+}
+
+.techTag {
+    background-color: #e0f7fa;
+    /* Light blue background for tags */
+    color: #00796b;
+    /* Darker green-blue text for tags */
+    padding: 0.4rem 0.9rem;
+    /* Adjusted padding */
+    border-radius: 20px;
+    /* Pill shape for tags */
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    /* Prevent tags from breaking */
+    border: 1px solid #dee2e6;
+    /* Subtle border */
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    /* Pushes links to the bottom of the card */
+    justify-content: center;
+    /* Center the links */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on small screens */
+}
+
+.detailsButton,
+/* Style for the new details button */
+.liveLink,
+.githubLink {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    /* Increased padding for buttons */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    /* Slightly smaller font for more compact buttons */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow to buttons */
+    flex-shrink: 0;
+    /* Prevent buttons from shrinking too much */
+}
+
+.detailsButton {
+    background-color: #6a1b9a;
+    /* A distinct color for details button, e.g., purple */
+    color: white;
+    border: 2px solid #6a1b9a;
+}
+
+.detailsButton:hover {
+    background-color: #4a148c;
+    /* Darker purple on hover */
+    border-color: #4a148c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.liveLink {
+    background-color: #007bff;
+    /* Primary blue */
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.liveLink:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+.githubLink {
+    background-color: #6c757d;
+    /* Grey */
+    color: white;
+    border: 2px solid #6c757d;
+}
+
+.githubLink:hover {
+    background-color: #5a6268;
+    /* Darker grey on hover */
+    border-color: #5a6268;
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+/* Responsive adjustments for project cards */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        /* Stack image and content */
+    }
+
+    .image {
+        height: 180px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .detailsButton,
+    .liveLink,
+    .githubLink {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.9rem;
+        width: 100%;
+        /* Make buttons full width on small screens */
+        max-width: 250px;
+        /* Constrain max width for full width buttons */
+    }
+
+    .links {
+        flex-direction: column;
+        /* Stack buttons vertically */
+        align-items: center;
+        /* Center stacked buttons */
+    }
+}

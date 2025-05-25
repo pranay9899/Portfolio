@@ -1,0 +1,148 @@
+/* src/pages/Home/Home.module.css */
+/* Styles for the Home page (hero section). */
+
+.homeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    /* Adjust based on Navbar/Footer height */
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fdfdfd;
+    /* Very light background */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    margin-top: 2rem;
+    /* Space from navbar */
+}
+
+.heroContent {
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 3.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.name {
+    color: #007bff;
+    /* Highlight your name */
+}
+
+.tagline {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.profession {
+    color: #28a745;
+    /* Highlight profession */
+}
+
+.introText {
+    font-size: 1.15rem;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Space between buttons */
+}
+
+.buttonPrimary,
+.buttonSecondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttonPrimary {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.buttonPrimary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.buttonSecondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.buttonSecondary:hover {
+    background-color: #e0f4ff;
+    /* Light blue background on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .greeting {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .introText {
+        font-size: 1rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .buttonPrimary,
+    .buttonSecondary {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeSection {
+        padding: 3rem 1rem;
+        min-height: auto;
+        /* Allow height to adjust */
+    }
+
+    .greeting {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .introText {
+        font-size: 0.95rem;
+    }
+}

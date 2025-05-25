@@ -1,0 +1,30 @@
+/* src/layout/Layout.module.css */
+/* Styles for the main layout structure. */
+
+.layoutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures the layout takes at least the full viewport height */
+}
+
+.mainContent {
+    flex-grow: 1;
+    /* Allows the main content area to expand and take available vertical space */
+    padding: 2rem 1rem;
+    /* Padding around the main content */
+    max-width: 1200px;
+    /* Maximum width for content for better readability on large screens */
+    margin: 0 auto;
+    /* Centers the content horizontally */
+    width: 100%;
+    /* Ensures it takes full width within the max-width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mainContent {
+        padding: 1.5rem 0.5rem;
+        /* Reduce padding on smaller screens */
+    }
+}

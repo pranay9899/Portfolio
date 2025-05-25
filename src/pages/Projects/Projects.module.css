@@ -1,0 +1,62 @@
+/* src/pages/Projects/Projects.module.css */
+/* Styles for the Projects page, including the grid layout for project cards. */
+
+.projectsSection {
+    padding: 3rem 1rem;
+    /* Adjust padding as needed */
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.projectsGrid {
+    display: grid;
+    /* Responsive grid: auto-fit creates as many columns as possible,
+     minmax ensures cards are at least 300px wide but can grow to 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    /* Space between cards */
+    justify-items: center;
+    /* Center cards horizontally in their grid cells */
+    align-items: stretch;
+    /* Stretch cards to fill height, useful for consistent card height */
+    max-width: 1200px;
+    /* Optional: Constrain grid width */
+    margin: 0 auto;
+    /* Center the grid */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        /* Single column on small screens */
+        padding: 0 0.5rem;
+        /* Add horizontal padding */
+        gap: 1.5rem;
+    }
+}
