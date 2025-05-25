@@ -9,7 +9,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
-import ProjectDetail from './pages/ProjectDetail/ProjectDetail'; // Corrected import path (singular 'Details')
+import ProjectDetail from './pages/ProjectDetails/ProjectDetails';
 
 function App() {
   return (
