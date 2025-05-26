@@ -8,9 +8,10 @@ function Contact() {
         message: '',
     });
     const [status, setStatus] = useState('');
+    const [mobileCopyStatus, setMobileCopyStatus] = useState('');
 
-    // UPDATED: Corrected the resumePath to 'Resume.pdf'
     const resumePath = `${import.meta.env.BASE_URL}Resume.pdf`;
+    const mobileNumber = "963852741"; // Define mobile number as a constant
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,6 +48,18 @@ function Contact() {
         } catch (error) {
             console.error('Error submitting form:', error);
             setStatus('Failed to send message. Network error.');
+        }
+    };
+
+    const handleCopyMobile = async () => {
+        try {
+            await navigator.clipboard.writeText(mobileNumber);
+            setMobileCopyStatus('Copied!');
+            setTimeout(() => setMobileCopyStatus(''), 2000);
+        } catch (err) {
+            console.error('Failed to copy mobile number: ', err);
+            setMobileCopyStatus('Failed to copy.');
+            setTimeout(() => setMobileCopyStatus(''), 2000);
         }
     };
 
@@ -104,7 +117,23 @@ function Contact() {
 
                 {/* Direct Contact Information and Resume Button */}
                 <div className={styles.contactInfo}>
-                    {/* Resume Download Button is now the first child here */}
+                    <h3>Direct Contact</h3> {/* Heading is now at the top */}
+                    <p>Email: <a href="mailto:npranay9899@gmail.com">npranay9899@gmail.com</a></p>
+                    <div className={styles.mobileContact}>
+                        <p>Mobile: <span className={styles.mobileNumber}>{mobileNumber}</span></p>
+                        <button onClick={handleCopyMobile} className={styles.copyButton}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                            </svg>
+                        </button>
+                        {mobileCopyStatus && <span className={styles.copyStatus}>{mobileCopyStatus}</span>}
+                    </div>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/pranaynyalapatla/" target="_blank" rel="noopener noreferrer">pranaynyalapatla</a></p>
+                    <p>GitHub: <a href="https://github.com/pranay9899" target="_blank" rel="noopener noreferrer">pranay9899</a></p>
+                    <p>Location: Hyderabad, Telangana, India</p>
+
+                    {/* MOVED: Resume Download Button is now the last child here */}
                     <a
                         href={resumePath}
                         target="_blank"
@@ -113,13 +142,6 @@ function Contact() {
                     >
                         Download Resume
                     </a>
-
-                    <h3>Direct Contact</h3>
-                    <p>Email: <a href="mailto:npranay9899@gmail.com">npranay9899@gmail.com</a></p>
-                    <p>Mobile: 9346718265</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/pranaynyalapatla/" target="_blank" rel="noopener noreferrer">pranaynyalapatla</a></p>
-                    <p>GitHub: <a href="https://github.com/pranay9899" target="_blank" rel="noopener noreferrer">pranay9899</a></p>
-                    <p>Location: Hyderabad, Telangana, India</p>
                 </div>
             </div>
         </section>
