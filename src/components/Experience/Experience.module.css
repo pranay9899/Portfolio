@@ -1,0 +1,173 @@
+/* src/components/Experience/Experience.module.css */
+
+/* Styling for the entire experience section container */
+.experienceSection {
+    background-color: #e8f5e9;
+    /* Sets a light green background color for visual distinction */
+    border-radius: 10px;
+    /* Applies rounded corners to the section */
+    padding: 2rem;
+    /* Adds internal spacing around the content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Adds a subtle shadow for depth */
+    margin-top: 2rem;
+    /* Provides space above this section from the preceding content */
+}
+
+/* Styling for the main heading of the experience section */
+.experienceHeading {
+    font-size: 2rem;
+    /* Sets a large font size for the heading */
+    color: #2e7d32;
+    /* Defines a dark green color for the heading */
+    margin-bottom: 1.5rem;
+    /* Adds spacing below the heading */
+    font-weight: 600;
+    /* Makes the heading text semi-bold */
+    text-align: center;
+    /* Centers the heading text */
+}
+
+/* Container for arranging individual experience entries using flexbox */
+.experienceEntriesContainer {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Stacks entries vertically */
+    gap: 1.5rem;
+    /* Adds space between each experience entry */
+}
+
+/* Styling for each individual experience entry card */
+.experienceEntry {
+    padding: 1.5rem;
+    /* Adds internal spacing within each entry */
+    border-left: 4px solid #4caf50;
+    /* Creates a prominent green left border as an accent */
+    background-color: #ffffff;
+    /* Sets a white background for the entry card */
+    border-radius: 8px;
+    /* Applies rounded corners to the entry card */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    /* Adds a soft shadow for depth */
+    text-align: left;
+    /* Aligns text content within the entry to the left */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for experience entry cards, lifting them slightly */
+.experienceEntry:hover {
+    transform: translateY(-5px);
+    /* Moves the card up by 5px on hover */
+}
+
+/* Styling for the job title within an experience entry */
+.title {
+    font-size: 1.5rem;
+    /* Sets font size for the job title */
+    color: #388e3c;
+    /* Defines a darker green color for the title */
+    margin-bottom: 0.5rem;
+    /* Adds spacing below the title */
+    font-weight: 600;
+    /* Makes the title text semi-bold */
+}
+
+/* Styling for company name and duration within an experience entry */
+.company,
+.duration {
+    font-size: 1.1rem;
+    /* Sets font size for company and duration text */
+    color: #555;
+    /* Defines a medium grey color */
+    margin-bottom: 0.3rem;
+    /* Adds small spacing below these lines */
+}
+
+/* Styling for the list of responsibilities */
+.responsibilitiesList {
+    list-style-type: disc;
+    /* Uses disc (bullet) points for list items */
+    padding-left: 20px;
+    /* Indents the list items */
+    margin-top: 1rem;
+    /* Adds space above the responsibilities list */
+    color: #666;
+    /* Defines a slightly lighter grey color for the list text */
+    font-size: 0.95rem;
+    /* Sets font size for list items */
+}
+
+/* Styling for individual responsibility list items */
+.responsibilitiesList li {
+    margin-bottom: 0.5rem;
+    /* Adds spacing between list items */
+    line-height: 1.5;
+    /* Increases line spacing for better readability */
+}
+
+/* Container for technology tags, using flexbox for wrapping */
+.technologies {
+    margin-top: 1rem;
+    /* Adds space above the technology tags */
+    display: flex;
+    /* Enables flexbox layout */
+    flex-wrap: wrap;
+    /* Allows tags to wrap to the next line if space is limited */
+    gap: 0.5rem;
+    /* Adds space between individual technology tags */
+}
+
+/* Styling for each individual technology tag */
+.techTag {
+    background-color: #c8e6c9;
+    /* Sets a lighter green background for the tag */
+    color: #2e7d32;
+    /* Defines a dark green text color for the tag */
+    padding: 0.4rem 0.8rem;
+    /* Adds internal spacing within the tag */
+    border-radius: 5px;
+    /* Applies rounded corners to the tag */
+    font-size: 0.85rem;
+    /* Sets a smaller font size for the tag text */
+    font-weight: 500;
+    /* Makes the tag text medium bold */
+}
+
+/* Responsive adjustments for screens up to 768px wide (typical tablets and larger phones) */
+@media (max-width: 768px) {
+    .experienceSection {
+        padding: 1.5rem;
+        /* Reduces overall padding for the section */
+        margin-top: 1.5rem;
+        /* Reduces top margin */
+    }
+
+    .experienceHeading {
+        font-size: 1.8rem;
+        /* Reduces heading font size */
+    }
+
+    .experienceEntry {
+        padding: 1rem;
+        /* Reduces padding within each entry */
+    }
+
+    .title {
+        font-size: 1.3rem;
+        /* Reduces job title font size */
+    }
+
+    .company,
+    .duration {
+        font-size: 1rem;
+        /* Reduces font size for company and duration */
+    }
+
+    .responsibilitiesList,
+    .techTag {
+        font-size: 0.85rem;
+        /* Further reduces font size for responsibilities and tech tags */
+    }
+}

@@ -1,20 +1,17 @@
-import styles from './About.module.css'; // Imports CSS modules for styling the About page.
-import Skills from '../../components/Skills/Skills'; // Imports the Skills component to display skill sets.
+import styles from './About.module.css';
+import Education from '../../components/Education/Education';
+import Experience from '../../components/Experience/Experience'; // New: Import Experience
+import Skills from '../../components/Skills/Skills';
 
 function About() {
-    // Constructs the path to the profile image using import.meta.env.BASE_URL for correct asset loading in Vite.
     const profileImagePath = `${import.meta.env.BASE_URL}assets/profile-pic.jpg`;
 
     return (
         <section className={styles.aboutSection}>
-            <h2 className={styles.heading}>About Me</h2> {/* Main heading for the About section. */}
+            <h2 className={styles.heading}>About Me</h2>
             <div className={styles.contentWrapper}>
                 <div className={styles.profileInfo}>
-                    <img
-                        src={profileImagePath} // Sets the source of the profile image.
-                        alt="Pranay Goud Nyalapatla" // Alternative text for accessibility.
-                        className={styles.profileImage} // Applies specific styles to the image.
-                    />
+                    <img src={profileImagePath} alt="Pranay Goud Nyalapatla" className={styles.profileImage} />
                     <p className={styles.bio}>
                         Hello! I'm Pranay Goud Nyalapatla, a creative and motivated Software Developer Fresher.
                         I have a passion for building user-centric full-stack applications. My journey in tech began
@@ -34,10 +31,13 @@ function About() {
                         impactful software solutions in a collaborative team environment.
                     </p>
                 </div>
-                <Skills /> {/* Renders the Skills component, displaying a breakdown of abilities. */}
+
+                <Experience /> {/* New: Add Experience component */}
+                <Education />
+                <Skills />
             </div>
         </section>
     );
 }
 
-export default About; // Exports the About component for use in routing.
+export default About;
