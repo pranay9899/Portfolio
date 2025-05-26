@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// 1. Change BrowserRouter to HashRouter
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './styles/base.css';
 
 // Import Layout and Page components
@@ -13,9 +14,9 @@ import ProjectDetail from './pages/ProjectDetails/ProjectDetails';
 
 function App() {
   return (
-    // Use the basename from Vite's environment variables.
-    // Vite populates import.meta.env.BASE_URL based on the 'base' config in vite.config.js
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    // 2. Use HashRouter instead of BrowserRouter
+    //    No need for 'basename' with HashRouter as it uses the URL hash.
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -26,7 +27,7 @@ function App() {
           <Route path="*" element={<div style={{ textAlign: 'center', padding: '50px', fontSize: '2rem' }}>404 - Page Not Found</div>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
