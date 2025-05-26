@@ -13,6 +13,7 @@ function Home() {
                     contribute effectively to a collaborative team environment and develop impactful software solutions.
                     Welcome to my digital space! Explore my projects to see how I turn ideas into reality.
                 </p>
+                <p>Please checkout my profile</p>
                 <div className={styles.ctaButtons}>
                     <a href="/projects" className={styles.buttonPrimary}>View My Work</a>
                     <a href="/contact" className={styles.buttonSecondary}>Get In Touch</a>
