@@ -1,29 +1,19 @@
-// src/pages/About/About.jsx
-import React from 'react';
-import styles from './About.module.css';
-import Skills from '../../components/Skills/Skills'; // Import the Skills component
+import styles from './About.module.css'; // Imports CSS modules for styling the About page.
+import Skills from '../../components/Skills/Skills'; // Imports the Skills component to display skill sets.
 
 function About() {
-    // Construct the full image path using import.meta.env.BASE_URL.
-    // This variable is populated by Vite based on the 'base' configuration
-    // in your vite.config.js file (which is '/Portfolio/').
-    // So, this will resolve to '/Portfolio/assets/profile-pic.jpg' during the build.
+    // Constructs the path to the profile image using import.meta.env.BASE_URL for correct asset loading in Vite.
     const profileImagePath = `${import.meta.env.BASE_URL}assets/profile-pic.jpg`;
 
     return (
         <section className={styles.aboutSection}>
-            <h2 className={styles.heading}>About Me</h2>
+            <h2 className={styles.heading}>About Me</h2> {/* Main heading for the About section. */}
             <div className={styles.contentWrapper}>
                 <div className={styles.profileInfo}>
-                    {/*
-                     * The 'src' attribute now uses the dynamically constructed path.
-                     * Ensure your 'profile-pic.jpg' is located inside your project's 'public/assets/' folder.
-                     * For example: your-project-root/public/assets/profile-pic.jpg
-                     */}
                     <img
-                        src={profileImagePath}
-                        alt="Pranay Goud Nyalapatla"
-                        className={styles.profileImage}
+                        src={profileImagePath} // Sets the source of the profile image.
+                        alt="Pranay Goud Nyalapatla" // Alternative text for accessibility.
+                        className={styles.profileImage} // Applies specific styles to the image.
                     />
                     <p className={styles.bio}>
                         Hello! I'm Pranay Goud Nyalapatla, a creative and motivated Software Developer Fresher.
@@ -44,11 +34,10 @@ function About() {
                         impactful software solutions in a collaborative team environment.
                     </p>
                 </div>
-                {/* Skills component to display your technical abilities */}
-                <Skills />
+                <Skills /> {/* Renders the Skills component, displaying a breakdown of abilities. */}
             </div>
         </section>
     );
 }
 
-export default About;
+export default About; // Exports the About component for use in routing.

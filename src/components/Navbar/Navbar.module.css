@@ -1,201 +1,250 @@
-/* src/components/Navbar/Navbar.module.css */
-/* Corrected and combined styles for the navigation bar. */
-
 .navbar {
     background-color: #2c3e50;
-    /* Dark blue-grey background */
+    /* Dark blue-grey background for the navbar */
     padding: 1rem 2rem;
+    /* Padding inside the navbar */
     display: flex;
+    /* Uses flexbox for layout */
     justify-content: space-between;
+    /* Spaces items evenly along the main axis */
     align-items: center;
+    /* Vertically aligns items in the center */
     color: white;
+    /* White text color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow below the navbar */
     position: sticky;
-    /* Makes navbar sticky at the top */
+    /* Makes the navbar stick to the top when scrolling */
     top: 0;
+    /* Positions the sticky navbar at the very top */
     z-index: 1000;
-    /* Ensures navbar is above other content */
+    /* Ensures the navbar appears above other content */
 }
+
+/* --- */
 
 /* Styles for the Initials-Based Logo */
 .logoInitialsLink {
     display: flex;
+    /* Uses flexbox for layout of logo elements */
     align-items: center;
+    /* Vertically aligns logo elements */
     text-decoration: none;
-    /* IMPORTANT: Ensures no underline by default */
+    /* Removes underline from the logo link */
     color: white;
     /* Default color for the entire logo container */
     font-size: 1.8rem;
-    /* Base font size */
+    /* Base font size for the logo */
     font-weight: 700;
+    /* Bold font weight */
     gap: 0.5rem;
-    /* Space between initials and full name */
+    /* Space between initials and full name (if present) */
     transition: color 0.3s ease;
-    /* Smooth transition for hover effects */
+    /* Smooth transition for color changes on hover */
 }
 
 .logoInitialsLink:hover {
     text-decoration: none;
-    /* IMPORTANT: Explicitly remove underline on hover for the link itself */
+    /* Explicitly removes underline on hover for the link itself */
 }
 
 .logoInitials {
-    /* NEW VIBRANT COLORS: From a bright orange to a deep blue/purple */
     background: linear-gradient(45deg, #FF416C, #5D3A99);
-    /* Bright Red-Orange to Deep Violet */
+    /* Applies a vibrant gradient background to the text */
     -webkit-background-clip: text;
-    /* Clip background to text shape */
+    /* Clips the background to the shape of the text */
     -webkit-text-fill-color: transparent;
-    /* Make text transparent so gradient shows */
+    /* Makes the text transparent so the gradient shows through */
     background-clip: text;
+    /* Standard property for clipping background to text */
     color: transparent;
     /* Fallback for browsers that don't support text-fill-color */
     padding: 0.2rem 0.5rem;
-    /* NEW BORDER COLOR: Match the vibrant red-orange start of the gradient */
+    /* Padding around the initials */
     border: 2px solid #FF416C;
-    /* Border color matching start of gradient */
+    /* Border color matching the start of the gradient */
     border-radius: 8px;
-    /* Slightly rounded corners */
+    /* Slightly rounded corners for the border */
     min-width: 3rem;
-    /* Ensure initials don't get too small */
+    /* Ensures initials maintain a minimum width */
     text-align: center;
-    /* NEW SHADOW COLOR: Subtle, based on the vibrant red-orange */
+    /* Centers the text within the initials container */
     box-shadow: 0 2px 8px rgba(255, 65, 108, 0.3);
-    /* Subtle shadow for depth */
+    /* Subtle shadow for depth, based on gradient start color */
     transition: all 0.3s ease;
+    /* Smooth transition for all property changes */
 }
 
 .logoInitialsLink:hover .logoInitials {
-    /* NEW BORDER COLOR ON HOVER: Match the deep violet end of the gradient on hover */
     border-color: #5D3A99;
-    /* Change border on hover */
-    /* NEW SHADOW COLOR ON HOVER: More prominent, based on the deep violet */
+    /* Changes border color to the end of the gradient on hover */
     box-shadow: 0 4px 15px rgba(93, 58, 153, 0.4);
-    /* More prominent shadow on hover */
+    /* More prominent shadow on hover, based on gradient end color */
     transform: translateY(-2px);
-    /* Slight lift effect */
+    /* Lifts the initials slightly on hover */
 }
 
 .logoFullName {
     font-size: 1.2rem;
-    /* Slightly smaller for the full name */
+    /* Font size for the full name */
     font-weight: 500;
+    /* Medium font weight */
     color: white;
-    /* White for the full name, for good contrast on dark navbar */
+    /* White color for good contrast */
     transition: color 0.3s ease;
+    /* Smooth transition for color changes */
 }
 
 .logoInitialsLink:hover .logoFullName {
     color: #e0b0ff;
-    /* Lighter shade on hover, adjusted to new gradient */
+    /* Lighter shade of purple on hover, matching the new gradient */
 }
 
+/* --- */
 
 /* Navigation Links Styles */
 .navLinks {
     list-style: none;
+    /* Removes bullet points from list items */
     display: flex;
+    /* Uses flexbox for horizontal layout of links */
     gap: 2rem;
     /* Space between navigation items */
 }
 
 .navLinks li a {
     color: white;
+    /* White color for navigation links */
     text-decoration: none;
+    /* Removes underline from links */
     font-weight: 500;
+    /* Medium font weight */
     font-size: 1.1rem;
+    /* Font size for navigation links */
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* Smooth transition for color and text-decoration */
     padding: 0.5rem 0;
-    /* Add padding for better click area */
+    /* Adds padding for a larger clickable area */
 }
 
 .navLinks li a:hover,
 .navLinks li a.active {
-    /* 'active' class is added by NavLink when the route matches */
     color: #007bff;
     /* Standard highlight color for hover and active links */
     text-decoration: underline;
-    /* Keep underline for navigation links */
+    /* Adds an underline for navigation links on hover and when active */
 }
+
+/* --- */
 
 /* Hamburger icon for mobile */
 .hamburger {
     display: none;
     /* Hidden by default on larger screens */
     font-size: 1.8rem;
+    /* Size of the hamburger icon */
     cursor: pointer;
+    /* Changes cursor to a pointer to indicate clickability */
     color: white;
+    /* White color for the icon */
 }
+
+/* --- */
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
-        /* Keep logo and hamburger on one row */
+        /* Keeps logo and hamburger on one row */
         justify-content: space-between;
+        /* Spaces logo and hamburger evenly */
         align-items: center;
+        /* Vertically aligns logo and hamburger */
         padding: 1rem;
+        /* Adjusts padding for smaller screens */
     }
 
     .navLinks {
         flex-direction: column;
-        /* Stack links vertically */
+        /* Stacks navigation links vertically */
         position: absolute;
+        /* Positions the menu absolutely */
         top: 100%;
-        /* Position below the navbar */
+        /* Places the menu directly below the navbar */
         left: 0;
+        /* Aligns the menu to the left edge */
         width: 100%;
+        /* Makes the menu span the full width */
         background-color: #2c3e50;
-        /* Same background as navbar */
+        /* Same background as the navbar */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Adds a shadow to the menu */
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        /* Adds a subtle top border */
         padding: 1rem 0;
+        /* Padding inside the mobile menu */
         display: none;
         /* Hidden by default */
         opacity: 0;
+        /* Starts with zero opacity for a fade-in effect */
         transform: translateY(-10px);
+        /* Starts slightly above its final position for animation */
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        /* Smooth transition for fade and slide effect */
     }
 
     .navLinks.open {
         display: flex;
-        /* Show when open */
+        /* Shows the menu when it has the 'open' class */
         opacity: 1;
+        /* Fades in the menu */
         transform: translateY(0);
+        /* Slides the menu into its final position */
     }
 
     .navLinks li {
         width: 100%;
+        /* Makes each list item take full width */
         text-align: center;
+        /* Centers the text within each list item */
     }
 
     .navLinks li a {
         display: block;
-        /* Make links take full width of list item */
+        /* Makes links take the full width of their list item */
         padding: 0.8rem 1rem;
+        /* Adjusts padding for mobile links */
         font-size: 1.2rem;
+        /* Increases font size for better readability on mobile */
     }
 
     .hamburger {
         display: block;
-        /* Show hamburger icon on small screens */
+        /* Shows the hamburger icon on small screens */
     }
 
-    /* Responsive adjustments for the logo */
+    /* --- */
+
+    /* Responsive adjustments for the logo on smaller screens */
     .logoInitialsLink {
         font-size: 1.5rem;
+        /* Smaller font size for the logo link */
         gap: 0.3rem;
+        /* Reduces space between logo elements */
     }
 
     .logoInitials {
         font-size: 1.5rem;
+        /* Smaller font size for the initials */
         padding: 0.1rem 0.4rem;
+        /* Adjusts padding for initials */
         min-width: 2.5rem;
+        /* Ensures initials don't get too small */
     }
 
     .logoFullName {
         font-size: 0.9rem;
-        /* Make full name smaller on small screens */
+        /* Makes the full name smaller on small screens */
         /* You could also hide it completely on very small screens if desired: */
         /* display: none; */
     }

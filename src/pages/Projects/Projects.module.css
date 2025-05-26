@@ -1,62 +1,79 @@
-/* src/pages/Projects/Projects.module.css */
-/* Styles for the Projects page, including the grid layout for project cards. */
-
 .projectsSection {
     padding: 3rem 1rem;
-    /* Adjust padding as needed */
+    /* Adjusts internal spacing around the entire section. */
     text-align: center;
+    /* Centers all text content within the section. */
 }
 
 .heading {
     font-size: 3rem;
+    /* Sets a large font size for the main heading. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color. */
     margin-bottom: 1rem;
+    /* Adds space below the heading. */
     font-weight: 700;
+    /* Makes the heading bold. */
 }
 
 .subheading {
     font-size: 1.1rem;
+    /* Sets the font size for the subheading. */
     color: #6c757d;
+    /* Defines a muted grey color. */
     margin-bottom: 3rem;
+    /* Adds significant space below the subheading. */
     max-width: 800px;
+    /* Limits the width of the subheading for better readability. */
     margin-left: auto;
+    /* Centers the subheading horizontally. */
     margin-right: auto;
+    /* Centers the subheading horizontally. */
     line-height: 1.7;
+    /* Increases line spacing for improved readability. */
 }
 
 .projectsGrid {
     display: grid;
-    /* Responsive grid: auto-fit creates as many columns as possible,
-     minmax ensures cards are at least 300px wide but can grow to 1fr */
+    /* Uses CSS Grid for a flexible and responsive layout. */
+    /* Configures the grid columns:
+       - `repeat(auto-fit, ...)`: Creates as many columns as can fit in the available space.
+       - `minmax(300px, 1fr)`: Each column will be at least 300px wide, but can grow to fill available space equally (`1fr`). */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    /* Space between cards */
+    /* Sets the space between grid items (project cards). */
     justify-items: center;
-    /* Center cards horizontally in their grid cells */
+    /* Centers individual grid items horizontally within their cells. */
     align-items: stretch;
-    /* Stretch cards to fill height, useful for consistent card height */
+    /* Stretches grid items vertically to ensure consistent card heights. */
     max-width: 1200px;
-    /* Optional: Constrain grid width */
+    /* Limits the overall width of the grid for a structured layout. */
     margin: 0 auto;
-    /* Center the grid */
+    /* Centers the entire grid horizontally on the page. */
 }
 
-/* Responsive adjustments for smaller screens */
+/* --- */
+
+/* Responsive adjustments for smaller screens (up to 768px wide) */
 @media (max-width: 768px) {
     .heading {
         font-size: 2.5rem;
+        /* Reduces the font size of the main heading for smaller screens. */
     }
 
     .subheading {
         font-size: 1rem;
+        /* Reduces the font size of the subheading. */
         margin-bottom: 2rem;
+        /* Reduces space below the subheading. */
     }
 
     .projectsGrid {
         grid-template-columns: 1fr;
-        /* Single column on small screens */
+        /* Changes the grid to a single column layout on small screens. */
         padding: 0 0.5rem;
-        /* Add horizontal padding */
+        /* Adds a small amount of horizontal padding to the grid. */
         gap: 1.5rem;
+        /* Reduces the space between stacked project cards. */
     }
 }

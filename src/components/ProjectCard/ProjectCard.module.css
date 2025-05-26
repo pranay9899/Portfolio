@@ -1,199 +1,243 @@
-/* src/components/ProjectCard/ProjectCard.module.css */
-/* Styles for the individual project cards. */
-
 .card {
     background-color: #ffffff;
+    /* Sets the background color of the card to white. */
     border-radius: 12px;
-    /* More rounded corners */
+    /* Applies rounded corners to the card. */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    /* Softer, larger shadow */
+    /* Adds a soft, subtle shadow for depth. */
     overflow: hidden;
+    /* Ensures content stays within the rounded corners. */
     display: flex;
+    /* Uses flexbox for layout within the card. */
     flex-direction: column;
+    /* Stacks items vertically within the card. */
     height: 100%;
-    /* Ensures all cards in a grid have equal height */
+    /* Ensures all cards in a grid have a consistent height. */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* Smooth transitions */
+    /* Smooth transition for transform and box-shadow on hover. */
 }
 
 .card:hover {
     transform: translateY(-8px);
-    /* Lift card on hover */
+    /* Lifts the card slightly upwards when hovered. */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    /* More prominent shadow on hover */
+    /* Makes the shadow more prominent on hover for a floating effect. */
 }
 
 .image {
     width: 100%;
+    /* Makes the image take up the full width of its container. */
     height: 220px;
-    /* Slightly increased image height for better visual */
+    /* Sets a fixed height for the project image. */
     object-fit: cover;
-    /* Ensures image covers the area, cropping if necessary */
+    /* Ensures the image covers the area, cropping if necessary to maintain aspect ratio. */
     border-bottom: 1px solid #eee;
+    /* Adds a thin, light grey border at the bottom of the image. */
 }
 
 .content {
     padding: 1.5rem;
+    /* Adds padding around the content area of the card. */
     display: flex;
+    /* Uses flexbox for arrangement of content elements. */
     flex-direction: column;
+    /* Stacks content elements (title, description, technologies, links) vertically. */
     flex-grow: 1;
-    /* Allows content area to expand to fill remaining space */
+    /* Allows the content area to expand and fill available vertical space within the card. */
 }
 
 .title {
     font-size: 1.7rem;
-    /* Slightly adjusted font size */
+    /* Sets the font size for the project title. */
     color: #2c3e50;
+    /* Defines the color for the project title. */
     margin-bottom: 0.8rem;
+    /* Adds space below the title. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold. */
 }
 
 .description {
     font-size: 1rem;
+    /* Sets the font size for the project description. */
     color: #6c757d;
+    /* Defines a muted grey color for the project description. */
     line-height: 1.6;
+    /* Increases line spacing for better readability. */
     margin-bottom: 1rem;
+    /* Adds space below the description. */
     flex-grow: 1;
-    /* Allows description to take up available space */
+    /* Allows the description to take up available space, pushing subsequent elements down. */
 }
 
 .technologies {
     display: flex;
+    /* Uses flexbox to arrange the technology tags. */
     flex-wrap: wrap;
+    /* Allows technology tags to wrap to the next line if they exceed container width. */
     gap: 0.6rem;
-    /* Slightly more space between tags */
+    /* Sets the space between individual technology tags. */
     margin-top: 1rem;
+    /* Adds space above the technology tags section. */
     margin-bottom: 1.5rem;
+    /* Adds space below the technology tags section. */
     justify-content: center;
-    /* Center the tech tags */
+    /* Centers the technology tags horizontally within their container. */
 }
 
 .techTag {
     background-color: #e0f7fa;
-    /* Light blue background for tags */
+    /* Sets a light blue background for each technology tag. */
     color: #00796b;
-    /* Darker green-blue text for tags */
+    /* Defines a dark green-blue text color for the tags. */
     padding: 0.4rem 0.9rem;
-    /* Adjusted padding */
+    /* Adds padding inside each technology tag. */
     border-radius: 20px;
-    /* Pill shape for tags */
+    /* Creates a pill-like shape for the tags. */
     font-size: 0.8rem;
+    /* Sets a smaller font size for the tags. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold for tag text. */
     white-space: nowrap;
-    /* Prevent tags from breaking */
+    /* Prevents text within tags from breaking into multiple lines. */
     border: 1px solid #dee2e6;
-    /* Subtle border */
+    /* Adds a subtle border around each tag. */
 }
 
 .links {
     display: flex;
+    /* Uses flexbox to arrange the action buttons (links) for the project. */
     gap: 1rem;
+    /* Sets the space between the buttons. */
     margin-top: auto;
-    /* Pushes links to the bottom of the card */
+    /* Pushes the links section to the bottom of the card, utilizing remaining space. */
     justify-content: center;
-    /* Center the links */
+    /* Centers the links horizontally within their container. */
     flex-wrap: wrap;
-    /* Allow buttons to wrap on small screens */
+    /* Allows buttons to wrap onto the next line on smaller screens if needed. */
 }
 
+/* Styles for all interactive buttons within the card (details, live, github) */
 .detailsButton,
-/* Style for the new details button */
 .liveLink,
 .githubLink {
     display: inline-block;
+    /* Makes buttons behave like inline-block elements, allowing padding and margin. */
     padding: 0.8rem 1.4rem;
-    /* Increased padding for buttons */
+    /* Adds padding inside the buttons. */
     border-radius: 6px;
+    /* Applies rounded corners to the buttons. */
     text-decoration: none;
+    /* Removes underline from button links. */
     font-weight: 600;
+    /* Sets the font weight for button text to semi-bold. */
     font-size: 0.95rem;
-    /* Slightly smaller font for more compact buttons */
+    /* Sets the font size for button text. */
     transition: all 0.3s ease;
+    /* Smooth transition for all property changes on hover. */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Add subtle shadow to buttons */
+    /* Adds a subtle shadow to the buttons. */
     flex-shrink: 0;
-    /* Prevent buttons from shrinking too much */
+    /* Prevents buttons from shrinking to fit available space. */
 }
 
 .detailsButton {
     background-color: #6a1b9a;
-    /* A distinct color for details button, e.g., purple */
+    /* Sets a distinct purple background for the "View Details" button. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #6a1b9a;
+    /* Adds a border matching the background color. */
 }
 
 .detailsButton:hover {
     background-color: #4a148c;
-    /* Darker purple on hover */
+    /* Darkens the purple background on hover. */
     border-color: #4a148c;
+    /* Darkens the border color on hover. */
     transform: translateY(-2px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent on hover. */
 }
 
 .liveLink {
     background-color: #007bff;
-    /* Primary blue */
+    /* Sets a primary blue background for the live demo link. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #007bff;
+    /* Adds a border matching the background color. */
 }
 
 .liveLink:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
+    /* Darkens the blue background on hover. */
     border-color: #0056b3;
+    /* Darkens the border color on hover. */
     transform: translateY(-2px);
-    /* Slight lift on hover */
+    /* Lifts the button slightly on hover. */
 }
 
 .githubLink {
     background-color: #6c757d;
-    /* Grey */
+    /* Sets a grey background for the GitHub link. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #6c757d;
+    /* Adds a border matching the background color. */
 }
 
 .githubLink:hover {
     background-color: #5a6268;
-    /* Darker grey on hover */
+    /* Darkens the grey background on hover. */
     border-color: #5a6268;
+    /* Darkens the border color on hover. */
     transform: translateY(-2px);
-    /* Slight lift on hover */
+    /* Lifts the button slightly on hover. */
 }
 
-/* Responsive adjustments for project cards */
+/* --- */
+
+/* Responsive adjustments for project cards on smaller screens (up to 768px wide) */
 @media (max-width: 768px) {
     .card {
         flex-direction: column;
-        /* Stack image and content */
+        /* Ensures the image and content stack vertically. */
     }
 
     .image {
         height: 180px;
+        /* Reduces the image height for smaller screens. */
     }
 
     .title {
         font-size: 1.5rem;
+        /* Adjusts the title font size for smaller screens. */
     }
 
     .description {
         font-size: 0.95rem;
+        /* Slightly reduces the description font size. */
     }
 
     .detailsButton,
     .liveLink,
     .githubLink {
         padding: 0.7rem 1.1rem;
+        /* Adjusts padding for buttons on smaller screens. */
         font-size: 0.9rem;
+        /* Reduces font size for buttons. */
         width: 100%;
-        /* Make buttons full width on small screens */
+        /* Makes buttons take full width of their container on small screens. */
         max-width: 250px;
-        /* Constrain max width for full width buttons */
+        /* Constrains the maximum width for full-width buttons to prevent them from becoming too wide. */
     }
 
     .links {
         flex-direction: column;
-        /* Stack buttons vertically */
+        /* Stacks the buttons vertically on smaller screens. */
         align-items: center;
-        /* Center stacked buttons */
+        /* Centers the stacked buttons horizontally. */
     }
 }

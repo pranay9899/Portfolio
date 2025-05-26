@@ -1,91 +1,125 @@
-/* src/components/Skills/Skills.module.css */
-/* Styles for the skills section. */
-
 .skillsContainer {
     margin-top: 3rem;
+    /* Adds space above the skills section. */
     padding: 2rem;
+    /* Adds padding inside the skills container. */
     background-color: #ffffff;
+    /* Sets the background color to white. */
     border-radius: 12px;
+    /* Applies rounded corners to the container. */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Adds a subtle shadow for depth. */
 }
 
 .skillsHeading {
     font-size: 2rem;
+    /* Sets the font size for the main skills heading. */
     color: #2c3e50;
+    /* Defines the color for the heading. */
     text-align: center;
+    /* Centers the heading text. */
     margin-bottom: 2rem;
+    /* Adds space below the heading. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold. */
 }
 
 .skillsGrid {
     display: grid;
+    /* Uses CSS Grid for arranging skill categories. */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Responsive grid for categories */
+    /* Creates a responsive grid with minimum column width of 250px. */
     gap: 1.5rem;
+    /* Sets the space between grid items (skill category cards). */
 }
 
 .categoryCard {
     background-color: #f0f4f8;
-    /* Light grey background for each category */
+    /* Sets a light grey background for each skill category card. */
     border-radius: 8px;
+    /* Applies rounded corners to the category cards. */
     padding: 1.5rem;
+    /* Adds padding inside each category card. */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Adds a subtle shadow to each category card. */
     display: flex;
+    /* Uses flexbox for content within the card. */
     flex-direction: column;
+    /* Stacks content (title and skill list) vertically. */
 }
 
 .categoryTitle {
     font-size: 1.4rem;
+    /* Sets the font size for the category titles (e.g., "Frontend"). */
     color: #007bff;
-    /* Highlight color for category titles */
+    /* Defines a highlight blue color for category titles. */
     margin-bottom: 1rem;
+    /* Adds space below the category title. */
     text-align: center;
+    /* Centers the category title text. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold. */
 }
 
 .skillList {
     list-style: none;
+    /* Removes default list bullet points. */
     padding: 0;
+    /* Removes default padding from the list. */
     margin: 0;
+    /* Removes default margin from the list. */
     display: flex;
+    /* Uses flexbox for arranging individual skill items. */
     flex-wrap: wrap;
+    /* Allows skill items to wrap to the next line if they exceed container width. */
     gap: 0.7rem;
-    /* Space between skill items */
+    /* Sets the space between individual skill items. */
     justify-content: center;
-    /* Center skills within the card */
+    /* Centers the skill items horizontally within the card. */
 }
 
 .skillItem {
     background-color: #e9ecef;
-    /* Light background for individual skills */
+    /* Sets a light background for each individual skill item. */
     color: #495057;
+    /* Defines a dark grey text color for skill items. */
     padding: 0.5rem 1rem;
+    /* Adds padding inside each skill item. */
     border-radius: 20px;
-    /* Pill shape */
+    /* Creates a pill-like shape for the skill items. */
     font-size: 0.9rem;
+    /* Sets the font size for skill item text. */
     font-weight: 500;
+    /* Sets the font weight to medium. */
     white-space: nowrap;
+    /* Prevents text within skill items from breaking into multiple lines. */
     border: 1px solid #dee2e6;
-    /* Subtle border */
+    /* Adds a subtle border around each skill item. */
 }
 
-/* Responsive adjustments */
+/* --- */
+
+/* Responsive adjustments for smaller screens (up to 768px wide) */
 @media (max-width: 768px) {
     .skillsHeading {
         font-size: 1.8rem;
+        /* Reduces the font size of the main skills heading on smaller screens. */
     }
 
     .skillsGrid {
         grid-template-columns: 1fr;
-        /* Single column on small screens */
+        /* Changes the grid to a single column layout on small screens. */
     }
 
     .categoryTitle {
         font-size: 1.2rem;
+        /* Reduces the font size of category titles on smaller screens. */
     }
 
     .skillItem {
         font-size: 0.85rem;
+        /* Reduces the font size of individual skill items. */
         padding: 0.4rem 0.8rem;
+        /* Adjusts padding for skill items on smaller screens. */
     }
 }

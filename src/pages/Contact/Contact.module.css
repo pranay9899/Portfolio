@@ -1,182 +1,258 @@
-/* src/pages/Contact/Contact.module.css */
-/* Styles for the Contact Me page, including the form and contact details. */
-
 .contactSection {
     padding: 3rem 1rem;
+    /* Adjusts padding around the entire contact section. */
     text-align: center;
+    /* Centers the text content within the section. */
 }
 
 .heading {
     font-size: 3rem;
+    /* Sets a large font size for the main heading. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the heading. */
     margin-bottom: 1rem;
+    /* Adds space below the heading. */
     font-weight: 700;
+    /* Sets the font weight to bold. */
 }
 
 .subheading {
     font-size: 1.1rem;
+    /* Sets the font size for the subheading. */
     color: #6c757d;
+    /* Defines a muted grey color for the subheading. */
     margin-bottom: 3rem;
+    /* Adds significant space below the subheading. */
     max-width: 700px;
+    /* Sets a maximum width for the subheading for better readability. */
     margin-left: auto;
+    /* Centers the subheading horizontally. */
     margin-right: auto;
+    /* Centers the subheading horizontally. */
     line-height: 1.7;
+    /* Increases line spacing for improved readability. */
 }
 
 .contactContent {
     display: flex;
+    /* Uses flexbox for arranging the contact form and info sections. */
     flex-wrap: wrap;
-    /* Allows items to wrap on smaller screens */
+    /* Allows items to wrap to the next line on smaller screens. */
     justify-content: center;
+    /* Centers the form and info sections horizontally. */
     gap: 3rem;
-    /* Space between form and info */
+    /* Sets the space between the contact form and contact information. */
     max-width: 1000px;
+    /* Sets a maximum width for the overall contact content wrapper. */
     margin: 0 auto;
+    /* Centers the contact content wrapper horizontally. */
     background-color: #ffffff;
+    /* Sets a white background for the content wrapper. */
     border-radius: 12px;
+    /* Applies rounded corners to the content wrapper. */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    /* Adds a soft, larger shadow for depth. */
     padding: 2.5rem;
+    /* Adds padding inside the content wrapper. */
 }
 
 .contactForm {
     flex: 2;
-    /* Form takes more space */
+    /* Allows the form to take up more proportional space within the flex container. */
     min-width: 300px;
-    /* Minimum width for form */
+    /* Sets a minimum width for the contact form. */
     padding: 1.5rem;
+    /* Adds padding inside the form. */
     border-radius: 8px;
+    /* Applies rounded corners to the form. */
     text-align: left;
+    /* Aligns text within the form to the left. */
 }
 
 .formGroup {
     margin-bottom: 1.5rem;
+    /* Adds space below each form group (label + input/textarea). */
 }
 
 .formGroup label {
     display: block;
+    /* Makes the label a block-level element, placing it on its own line. */
     margin-bottom: 0.5rem;
+    /* Adds space below the label. */
     font-weight: 600;
+    /* Sets the font weight of the label to semi-bold. */
     color: #34495e;
+    /* Defines a dark blue-grey color for labels. */
 }
 
 .inputField,
 .textareaField {
     width: 100%;
+    /* Makes input fields and textareas take full width of their parent. */
     padding: 0.8rem;
+    /* Adds padding inside input fields and textareas. */
     border: 1px solid #ced4da;
+    /* Adds a light grey border. */
     border-radius: 6px;
+    /* Applies rounded corners. */
     font-size: 1rem;
+    /* Sets the font size. */
     font-family: 'Inter', sans-serif;
+    /* Specifies a font family. */
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth transition for border and shadow on focus. */
 }
 
 .inputField:focus,
 .textareaField:focus {
     outline: none;
+    /* Removes the default outline on focus. */
     border-color: #007bff;
+    /* Changes border color to blue on focus. */
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    /* Adds a subtle blue shadow on focus. */
 }
 
 .textareaField {
     resize: vertical;
-    /* Allow vertical resizing of textarea */
+    /* Allows the textarea to be resized vertically by the user. */
 }
 
 .submitButton {
     background-color: #28a745;
-    /* Green submit button */
+    /* Sets a green background for the submit button. */
     color: white;
+    /* Sets text color to white. */
     padding: 1rem 2rem;
+    /* Adds padding inside the button. */
     border: none;
+    /* Removes default button border. */
     border-radius: 8px;
+    /* Applies rounded corners. */
     font-size: 1.1rem;
+    /* Sets the font size. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold. */
     cursor: pointer;
+    /* Changes cursor to a pointer on hover. */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions for background and transform. */
     box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+    /* Adds a subtle green shadow. */
 }
 
 .submitButton:hover {
     background-color: #218838;
-    /* Darker green on hover */
+    /* Darkens the background color on hover. */
     transform: translateY(-2px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    /* Makes the shadow more prominent on hover. */
 }
 
 .statusMessage {
     margin-top: 1.5rem;
+    /* Adds space above the status message. */
     font-size: 1rem;
+    /* Sets the font size. */
     font-weight: 500;
+    /* Sets the font weight to medium. */
     color: #28a745;
-    /* Success message color */
+    /* Sets the text color to green (for success messages). */
 }
 
 .contactInfo {
     flex: 1;
-    /* Info section takes less space */
+    /* Allows the info section to take less proportional space. */
     min-width: 250px;
-    /* Minimum width for info */
+    /* Sets a minimum width for the contact information section. */
     padding: 1.5rem;
+    /* Adds padding inside the info section. */
     border-radius: 8px;
+    /* Applies rounded corners. */
     background-color: #e9ecef;
-    /* Light grey background */
+    /* Sets a light grey background. */
     text-align: left;
+    /* Aligns text within the info section to the left. */
     display: flex;
+    /* Uses flexbox for content within the info section. */
     flex-direction: column;
+    /* Stacks content vertically. */
     justify-content: center;
+    /* Centers content vertically if there's extra space. */
 }
 
 .contactInfo h3 {
     font-size: 1.8rem;
+    /* Sets the font size for the "Direct Contact" heading. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the heading. */
     margin-bottom: 1.5rem;
+    /* Adds space below the heading. */
     text-align: center;
+    /* Centers the heading text. */
 }
 
 .contactInfo p {
     font-size: 1rem;
+    /* Sets the font size for paragraphs in contact info. */
     color: #495057;
+    /* Defines a dark grey color for text. */
     margin-bottom: 0.8rem;
+    /* Adds space below each paragraph. */
 }
 
 .contactInfo p a {
     color: #007bff;
+    /* Sets the link color to blue. */
     text-decoration: none;
+    /* Removes underline from links. */
     word-break: break-all;
-    /* Helps with long email/link strings */
+    /* Allows long email/link strings to break to prevent overflow. */
 }
 
 .contactInfo p a:hover {
     text-decoration: underline;
+    /* Adds underline on link hover. */
 }
 
-/* Responsive adjustments */
+/* --- */
+
+/* Responsive adjustments for screens up to 768px wide */
 @media (max-width: 768px) {
     .heading {
         font-size: 2.5rem;
+        /* Reduces the font size of the main heading. */
     }
 
     .subheading {
         font-size: 1rem;
+        /* Reduces the font size of the subheading. */
         margin-bottom: 2rem;
+        /* Reduces space below the subheading. */
     }
 
     .contactContent {
         flex-direction: column;
-        /* Stack form and info vertically */
+        /* Stacks the form and info sections vertically. */
         padding: 1.5rem;
+        /* Reduces padding inside the content wrapper. */
         gap: 2rem;
+        /* Reduces space between the stacked sections. */
     }
 
     .contactForm,
     .contactInfo {
         min-width: unset;
-        /* Remove min-width to allow full width */
+        /* Removes the minimum width constraint. */
         width: 100%;
+        /* Makes both sections take full width of their parent. */
         padding: 1rem;
+        /* Reduces padding inside these sections. */
     }
 
     .submitButton {
         width: 100%;
+        /* Makes the submit button take full width. */
     }
 }

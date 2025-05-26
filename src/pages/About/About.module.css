@@ -1,82 +1,113 @@
-/* src/pages/About/About.module.css */
-/* Styles for the About Me page. */
-
 .aboutSection {
     padding: 3rem 1rem;
-    /* Adjust padding as needed */
+    /* Adjusts padding around the entire about section. */
     text-align: center;
+    /* Centers the text content within the section. */
 }
 
 .heading {
     font-size: 3rem;
+    /* Sets a large font size for the main heading. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the heading. */
     margin-bottom: 2.5rem;
+    /* Adds significant space below the heading. */
     font-weight: 700;
+    /* Sets the font weight to bold. */
 }
 
 .contentWrapper {
     display: flex;
+    /* Uses flexbox for arranging children (profile info and skills). */
     flex-direction: column;
+    /* Stacks children vertically. */
     gap: 3rem;
-    /* Space between profile info and skills */
+    /* Adds space between the profile information and the skills section. */
     max-width: 900px;
+    /* Sets a maximum width for the content wrapper for readability. */
     margin: 0 auto;
+    /* Centers the content wrapper horizontally on the page. */
     background-color: #ffffff;
+    /* Sets a white background for the content wrapper. */
     border-radius: 12px;
+    /* Applies rounded corners to the content wrapper. */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    /* Adds a soft, larger shadow for depth. */
     padding: 2.5rem;
+    /* Adds padding inside the content wrapper. */
 }
 
 .profileInfo {
     text-align: center;
+    /* Centers the text content within the profile information section. */
 }
 
 .profileImage {
     width: 200px;
+    /* Sets the width of the profile image. */
     height: 200px;
+    /* Sets the height of the profile image. */
     border-radius: 50%;
-    /* Circular image */
+    /* Creates a perfect circle shape for the image. */
     object-fit: cover;
+    /* Ensures the image covers the area, cropping if necessary. */
     margin-bottom: 2rem;
+    /* Adds space below the profile image. */
     border: 5px solid #007bff;
-    /* Border around image */
+    /* Adds a blue border around the image. */
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-    /* Soft shadow for image */
+    /* Adds a soft blue shadow around the image. */
 }
 
 .bio {
     font-size: 1.1rem;
+    /* Sets the font size for the biographical paragraphs. */
     color: #555;
+    /* Defines a medium grey color for the text. */
     line-height: 1.8;
+    /* Increases line spacing for better readability. */
     margin-bottom: 1.5rem;
+    /* Adds space below each bio paragraph. */
     text-align: left;
-    /* Align text to left for readability */
+    /* Aligns the biographical text to the left for standard reading flow. */
 }
 
 .bio:last-child {
     margin-bottom: 0;
+    /* Removes bottom margin from the last bio paragraph to avoid extra space. */
 }
 
-/* Responsive adjustments */
+/* --- */
+
+/* Responsive adjustments for screens up to 768px wide */
 @media (max-width: 768px) {
     .heading {
         font-size: 2.5rem;
+        /* Reduces the font size of the main heading on smaller screens. */
         margin-bottom: 2rem;
+        /* Reduces the space below the heading. */
     }
 
     .contentWrapper {
         padding: 1.5rem;
+        /* Reduces padding inside the content wrapper. */
         gap: 2rem;
+        /* Reduces the space between profile info and skills. */
     }
 
     .profileImage {
         width: 150px;
+        /* Reduces the width of the profile image. */
         height: 150px;
+        /* Reduces the height of the profile image. */
         margin-bottom: 1.5rem;
+        /* Reduces the space below the profile image. */
     }
 
     .bio {
         font-size: 1rem;
+        /* Reduces the font size of the bio text. */
         margin-bottom: 1rem;
+        /* Reduces the space below each bio paragraph. */
     }
 }

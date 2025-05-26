@@ -1,148 +1,203 @@
-/* src/pages/Home/Home.module.css */
-/* Styles for the Home page (hero section). */
-
 .homeSection {
     display: flex;
+    /* Uses flexbox to arrange content. */
     flex-direction: column;
+    /* Stacks items vertically. */
     align-items: center;
+    /* Centers items horizontally. */
     justify-content: center;
+    /* Centers items vertically. */
     min-height: calc(100vh - 120px);
-    /* Adjust based on Navbar/Footer height */
+    /* Sets a minimum height, accounting for Navbar/Footer. */
     padding: 4rem 2rem;
+    /* Adds padding around the section. */
     text-align: center;
+    /* Centers text content. */
     background-color: #fdfdfd;
-    /* Very light background */
+    /* Sets a very light background color. */
     border-radius: 12px;
+    /* Applies rounded corners. */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    /* Soft shadow */
+    /* Adds a soft shadow for depth. */
     margin-top: 2rem;
-    /* Space from navbar */
+    /* Adds space above the section, separating it from the navbar. */
 }
 
 .heroContent {
     max-width: 800px;
+    /* Sets a maximum width for the main content block. */
     margin-bottom: 2rem;
+    /* Adds space below the content before other potential elements. */
 }
 
 .greeting {
     font-size: 3.8rem;
+    /* Sets a large font size for the greeting. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the text. */
     margin-bottom: 1rem;
+    /* Adds space below the greeting. */
     font-weight: 700;
+    /* Sets the font weight to bold. */
 }
 
 .name {
     color: #007bff;
-    /* Highlight your name */
+    /* Highlights the name with a primary blue color. */
 }
 
 .tagline {
     font-size: 1.8rem;
+    /* Sets the font size for the professional tagline. */
     color: #34495e;
+    /* Defines a slightly lighter dark blue-grey color. */
     margin-bottom: 1.5rem;
+    /* Adds space below the tagline. */
     font-weight: 500;
+    /* Sets the font weight to medium. */
 }
 
 .profession {
     color: #28a745;
-    /* Highlight profession */
+    /* Highlights the profession with a green color. */
 }
 
 .introText {
     font-size: 1.15rem;
+    /* Sets the font size for the introductory paragraph. */
     color: #6c757d;
+    /* Defines a muted grey color for the text. */
     line-height: 1.8;
+    /* Increases line spacing for readability. */
     margin-bottom: 2.5rem;
+    /* Adds space below the introductory text. */
 }
 
 .ctaButtons {
     display: flex;
+    /* Uses flexbox to arrange the call-to-action buttons. */
     justify-content: center;
+    /* Centers the buttons horizontally. */
     gap: 1.5rem;
-    /* Space between buttons */
+    /* Sets the space between the buttons. */
 }
 
 .buttonPrimary,
 .buttonSecondary {
     display: inline-block;
+    /* Allows setting padding, margin, and other block properties. */
     padding: 1rem 2rem;
+    /* Adds padding inside the buttons. */
     border-radius: 8px;
+    /* Applies rounded corners to the buttons. */
     text-decoration: none;
+    /* Removes underline from button links. */
     font-weight: 600;
+    /* Sets the font weight to semi-bold. */
     font-size: 1.1rem;
+    /* Sets the font size for button text. */
     transition: all 0.3s ease;
+    /* Smooth transition for all property changes on hover. */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow to the buttons. */
 }
 
 .buttonPrimary {
     background-color: #007bff;
+    /* Sets a primary blue background for the primary button. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #007bff;
+    /* Adds a border matching the background color. */
 }
 
 .buttonPrimary:hover {
     background-color: #0056b3;
+    /* Darkens the blue background on hover. */
     border-color: #0056b3;
+    /* Darkens the border color on hover. */
     transform: translateY(-3px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent on hover. */
 }
 
 .buttonSecondary {
     background-color: transparent;
+    /* Sets a transparent background for the secondary button. */
     color: #007bff;
+    /* Sets the text color to primary blue. */
     border: 2px solid #007bff;
+    /* Adds a blue border. */
 }
 
 .buttonSecondary:hover {
     background-color: #e0f4ff;
-    /* Light blue background on hover */
+    /* Sets a very light blue background on hover. */
     transform: translateY(-3px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent on hover. */
 }
 
-/* Responsive adjustments */
+/* --- */
+
+/* Responsive adjustments for screens up to 992px wide */
 @media (max-width: 992px) {
     .greeting {
         font-size: 3rem;
+        /* Reduces the font size of the greeting. */
     }
 
     .tagline {
         font-size: 1.5rem;
+        /* Reduces the font size of the tagline. */
     }
 
     .introText {
         font-size: 1rem;
+        /* Reduces the font size of the introductory text. */
     }
 
     .ctaButtons {
         flex-direction: column;
+        /* Stacks the buttons vertically. */
         gap: 1rem;
+        /* Reduces the space between stacked buttons. */
     }
 
     .buttonPrimary,
     .buttonSecondary {
         width: 80%;
+        /* Makes buttons take up 80% width. */
         max-width: 300px;
+        /* Constrains the maximum width for full-width buttons. */
         margin: 0 auto;
+        /* Centers the buttons when stacked. */
     }
 }
 
+/* Responsive adjustments for screens up to 768px wide */
 @media (max-width: 768px) {
     .homeSection {
         padding: 3rem 1rem;
+        /* Reduces padding around the section. */
         min-height: auto;
-        /* Allow height to adjust */
+        /* Allows the height to adjust based on content, no longer fixed minimum. */
     }
 
     .greeting {
         font-size: 2.5rem;
+        /* Further reduces the font size of the greeting. */
     }
 
     .tagline {
         font-size: 1.2rem;
+        /* Further reduces the font size of the tagline. */
     }
 
     .introText {
         font-size: 0.95rem;
+        /* Further reduces the font size of the introductory text. */
     }
 }

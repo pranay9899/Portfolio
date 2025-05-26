@@ -1,193 +1,293 @@
-/* src/pages/ProjectDetail/ProjectDetail.module.css */
 .projectDetailSection {
     padding: 3rem 1rem;
+    /* Adjusts the internal spacing of the section. */
     max-width: 900px;
+    /* Limits the maximum width for better readability on large screens. */
     margin: 0 auto;
+    /* Centers the section horizontally on the page. */
     background-color: #ffffff;
+    /* Sets the background color to white. */
     border-radius: 12px;
+    /* Rounds the corners of the section. */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    /* Adds a subtle shadow for depth. */
     text-align: center;
+    /* Centers all text content within the section. */
 }
 
 .title {
     font-size: 2.8rem;
+    /* Sets a prominent font size for the project title. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the title. */
     margin-bottom: 2rem;
+    /* Adds space below the title. */
     font-weight: 700;
+    /* Makes the title bold. */
 }
 
 .imageContainer {
     margin-bottom: 2rem;
+    /* Adds space below the image container. */
 }
 
 .image {
     max-width: 100%;
+    /* Ensures the image scales down on smaller screens. */
     height: auto;
+    /* Maintains the image's aspect ratio. */
     border-radius: 8px;
+    /* Rounds the corners of the image. */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Adds a soft shadow to the image. */
 }
 
 .detailsContent {
     text-align: left;
-    /* Align text within details to left for readability */
+    /* Aligns text inside this content block to the left for readability. */
     padding: 0 1.5rem;
+    /* Adds horizontal padding within the details. */
 }
 
 .description {
     font-size: 1.1rem;
+    /* Sets the font size for the project description. */
     color: #555;
+    /* Defines a medium grey color for the text. */
     line-height: 1.8;
+    /* Increases line spacing for better readability. */
     margin-bottom: 2.5rem;
+    /* Adds space below the description. */
 }
 
 .techStack {
     margin-top: 2rem;
+    /* Adds space above the technology stack section. */
     margin-bottom: 2.5rem;
+    /* Adds space below the technology stack section. */
     text-align: center;
+    /* Centers the content within the tech stack. */
 }
 
 .techStack h3 {
     font-size: 1.6rem;
+    /* Sets the font size for the tech stack heading. */
     color: #2c3e50;
+    /* Defines a dark blue-grey color for the heading. */
     margin-bottom: 1.5rem;
+    /* Adds space below the heading. */
     font-weight: 600;
+    /* Makes the heading semi-bold. */
 }
 
 .technologies {
     display: flex;
+    /* Arranges technology tags using flexbox. */
     flex-wrap: wrap;
+    /* Allows tags to wrap onto multiple lines. */
     gap: 0.7rem;
+    /* Sets the space between individual technology tags. */
     justify-content: center;
-    /* Center the tech tags */
+    /* Centers the technology tags horizontally. */
 }
 
 .techTag {
     background-color: #e0f7fa;
+    /* Sets a light background color for the tags. */
     color: #00796b;
+    /* Defines a dark teal color for tag text. */
     padding: 0.5rem 1rem;
+    /* Adds internal spacing to the tags. */
     border-radius: 20px;
+    /* Makes the tags pill-shaped. */
     font-size: 0.9rem;
+    /* Sets a slightly smaller font size for tag text. */
     font-weight: 600;
+    /* Makes the tag text semi-bold. */
     white-space: nowrap;
+    /* Prevents text within tags from wrapping. */
     border: 1px solid #dee2e6;
+    /* Adds a subtle border to the tags. */
 }
 
 .links {
     display: flex;
+    /* Arranges project links using flexbox. */
     justify-content: center;
+    /* Centers the links horizontally. */
     gap: 1.5rem;
+    /* Sets the space between the links. */
     margin-top: 2.5rem;
+    /* Adds space above the links. */
     margin-bottom: 3rem;
+    /* Adds space below the links. */
 }
 
 .liveLink,
 .githubLink {
     display: inline-block;
+    /* Allows vertical padding and margin, acts like a block element in terms of layout. */
     padding: 1rem 2rem;
+    /* Adds internal spacing to the link buttons. */
     border-radius: 8px;
+    /* Rounds the corners of the link buttons. */
     text-decoration: none;
+    /* Removes the underline from link text. */
     font-weight: 600;
+    /* Makes the link text semi-bold. */
     font-size: 1.1rem;
+    /* Sets the font size for link text. */
     transition: all 0.3s ease;
+    /* Smooth transition for hover effects. */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow to the link buttons. */
 }
 
 .liveLink {
     background-color: #007bff;
+    /* Sets a primary blue background for the live demo link. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #007bff;
+    /* Adds a blue border. */
 }
 
 .liveLink:hover {
     background-color: #0056b3;
+    /* Darkens the background color on hover. */
     border-color: #0056b3;
+    /* Darkens the border color on hover. */
     transform: translateY(-3px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent on hover. */
 }
 
 .githubLink {
     background-color: #6c757d;
+    /* Sets a muted grey background for the GitHub link. */
     color: white;
+    /* Sets the text color to white. */
     border: 2px solid #6c757d;
+    /* Adds a grey border. */
 }
 
 .githubLink:hover {
     background-color: #5a6268;
+    /* Darkens the background color on hover. */
     border-color: #5a6268;
+    /* Darkens the border color on hover. */
     transform: translateY(-3px);
+    /* Lifts the button slightly on hover. */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent on hover. */
 }
 
 .backButton {
     display: inline-block;
+    /* Allows vertical padding and margin. */
     margin-top: 2rem;
+    /* Adds space above the back button. */
     padding: 0.8rem 1.5rem;
+    /* Adds internal spacing to the button. */
     background-color: #f8f9fa;
+    /* Sets a very light grey background. */
     color: #007bff;
+    /* Sets the text color to primary blue. */
     border: 1px solid #007bff;
+    /* Adds a blue border. */
     border-radius: 8px;
+    /* Rounds the corners of the button. */
     text-decoration: none;
+    /* Removes the underline from link text. */
     font-weight: 600;
+    /* Makes the button text semi-bold. */
     transition: all 0.3s ease;
+    /* Smooth transition for hover effects. */
 }
 
 .backButton:hover {
     background-color: #e2f0ff;
+    /* Sets a light blue background on hover. */
     transform: translateY(-2px);
+    /* Lifts the button slightly on hover. */
 }
 
 .notFound {
     text-align: center;
+    /* Centers the text content within the not found message. */
     padding: 50px;
+    /* Adds internal spacing to the not found box. */
     font-size: 1.5rem;
+    /* Sets a larger font size for the text. */
     color: #dc3545;
+    /* Defines a red color for the error message. */
     background-color: #fff;
+    /* Sets a white background for the box. */
     border-radius: 12px;
+    /* Rounds the corners of the box. */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Adds a subtle shadow. */
     max-width: 600px;
+    /* Limits the maximum width of the box. */
     margin: 50px auto;
+    /* Centers the box horizontally with vertical margins. */
 }
 
 .notFound h2 {
     color: #dc3545;
+    /* Sets a red color for the "Project Not Found" heading. */
     margin-bottom: 1rem;
+    /* Adds space below the heading. */
 }
 
 .notFound p {
     margin-bottom: 2rem;
+    /* Adds space below the paragraph. */
     color: #6c757d;
+    /* Defines a muted grey color for the text. */
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .projectDetailSection {
         padding: 2rem 0.5rem;
+        /* Reduces padding for smaller screens. */
     }
 
     .title {
         font-size: 2.2rem;
+        /* Decreases the font size of the title for smaller screens. */
         margin-bottom: 1.5rem;
+        /* Reduces space below the title. */
     }
 
     .description {
         font-size: 1rem;
+        /* Reduces the font size of the description. */
     }
 
     .links {
         flex-direction: column;
+        /* Stacks the links vertically on smaller screens. */
         gap: 1rem;
+        /* Reduces the space between stacked links. */
     }
 
     .liveLink,
     .githubLink {
         width: 80%;
+        /* Makes link buttons take up 80% width. */
         margin: 0 auto;
+        /* Centers the link buttons when stacked. */
         padding: 0.8rem 1.5rem;
+        /* Reduces internal spacing of link buttons. */
         font-size: 1rem;
+        /* Reduces the font size of link button text. */
     }
 
     .techStack h3 {
         font-size: 1.4rem;
+        /* Decreases the font size of the tech stack heading. */
     }
 }
