@@ -1,5 +1,4 @@
-// src/pages/Home/Home.jsx
-import React from 'react';
+import { Link } from 'react-router-dom'; // Add this line
 import styles from './Home.module.css';
 
 function Home() {
@@ -15,8 +14,10 @@ function Home() {
                 </p>
                 <p>Please checkout my profile</p>
                 <div className={styles.ctaButtons}>
-                    <a href="/projects" className={styles.buttonPrimary}>View My Work</a>
-                    <a href="/contact" className={styles.buttonSecondary}>Get In Touch</a>
+                    {/* Change <a> to <Link> */}
+                    <Link to="/projects" className={styles.buttonPrimary}>View My Work</Link>
+                    {/* Change <a> to <Link> */}
+                    <Link to="/contact" className={styles.buttonSecondary}>Get In Touch</Link>
                 </div>
             </div>
             {/* Optional: Add a hero image related to development or yourself */}
