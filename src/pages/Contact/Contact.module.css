@@ -150,6 +150,13 @@
     /* Makes the shadow more prominent on hover. */
 }
 
+.submitButton:focus,
+.submitButton:active {
+    outline: none;
+    /* Removes the default outline */
+}
+
+
 .statusMessage {
     margin-top: 1.5rem;
     /* Adds space above the status message. */
@@ -180,6 +187,8 @@
     /* Stacks content vertically. */
     justify-content: center;
     /* Centers content vertically if there's extra space. */
+    gap: 1rem;
+    /* Add some gap between items in contact info */
 }
 
 .contactInfo h3 {
@@ -187,8 +196,8 @@
     /* Sets the font size for the "Direct Contact" heading. */
     color: #2c3e50;
     /* Defines a dark blue-grey color for the heading. */
-    margin-bottom: 1.5rem;
-    /* Adds space below the heading. */
+    margin-bottom: 0.5rem;
+    /* Reduced margin here as gap handles spacing */
     text-align: center;
     /* Centers the heading text. */
 }
@@ -198,8 +207,9 @@
     /* Sets the font size for paragraphs in contact info. */
     color: #495057;
     /* Defines a dark grey color for text. */
-    margin-bottom: 0.8rem;
-    /* Adds space below each paragraph. */
+    margin-bottom: 0;
+    /* Removed margin as gap handles spacing */
+    line-height: 1.5;
 }
 
 .contactInfo p a {
@@ -216,43 +226,74 @@
     /* Adds underline on link hover. */
 }
 
-/* --- */
+/* Styles for the Resume Button */
+.resumeButton {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    /* REMOVED HERE: Already removed on base state, but good to ensure */
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
+    width: fit-content;
+    align-self: center;
+}
+
+.resumeButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 117, 125, 0.3);
+    text-decoration: none;
+    /* NEW: Removes underline on hover specifically */
+}
+
+.resumeButton:focus,
+.resumeButton:active {
+    outline: none;
+    /* Removes the default outline */
+}
+
 
 /* Responsive adjustments for screens up to 768px wide */
 @media (max-width: 768px) {
     .heading {
         font-size: 2.5rem;
-        /* Reduces the font size of the main heading. */
     }
 
     .subheading {
         font-size: 1rem;
-        /* Reduces the font size of the subheading. */
         margin-bottom: 2rem;
-        /* Reduces space below the subheading. */
     }
 
     .contactContent {
         flex-direction: column;
-        /* Stacks the form and info sections vertically. */
         padding: 1.5rem;
-        /* Reduces padding inside the content wrapper. */
         gap: 2rem;
-        /* Reduces space between the stacked sections. */
     }
 
     .contactForm,
     .contactInfo {
         min-width: unset;
-        /* Removes the minimum width constraint. */
         width: 100%;
-        /* Makes both sections take full width of their parent. */
         padding: 1rem;
-        /* Reduces padding inside these sections. */
     }
 
-    .submitButton {
+    .submitButton,
+    .resumeButton {
         width: 100%;
-        /* Makes the submit button take full width. */
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .contactInfo h3 {
+        margin-top: 1rem;
     }
 }
