@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'; // Imports useParams to extract URL parameters and Link for navigation.
-import projects from '../../data/Projects'; // Corrected: Ensure the filename capitalization matches (lowercase 'p' if the file is 'projects.js')
+import projects from '../../data/Projects';
 import styles from './ProjectDetails.module.css'; // Imports CSS modules for styling.
 
 function ProjectDetail() {
@@ -20,6 +20,11 @@ function ProjectDetail() {
 
     // Destructures properties from the found project object for easier access in JSX.
     const { title, description, detailedDescription, image, technologies, liveLink, githubLink } = project;
+
+    // Determine if the live link should be active (not '#')
+    const isLiveLinkActive = liveLink && liveLink !== '#';
+    // Determine if the GitHub link should be active (not '#')
+    const isGithubLinkActive = githubLink && githubLink !== '#';
 
     return (
         <section className={styles.projectDetailSection}>
@@ -45,17 +50,21 @@ function ProjectDetail() {
                 </div>
 
                 <div className={styles.links}>
-                    {/* Conditionally renders the "View Live Demo" link if liveLink exists. */}
-                    {liveLink && (
+                    {/* Conditionally renders the "View Live Demo" link if liveLink exists AND is not '#'. */}
+                    {isLiveLinkActive && (
                         <a href={liveLink} target="_blank" rel="noopener noreferrer" className={styles.liveLink}>
                             View Live Demo
                         </a>
                     )}
-                    {/* Conditionally renders the "View GitHub Repo" link if githubLink exists. */}
-                    {githubLink && (
+                    {/* Conditionally renders the "View GitHub Repo" link if githubLink exists AND is not '#'. */}
+                    {isGithubLinkActive && (
                         <a href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
                             View GitHub Repo
                         </a>
+                    )}
+                    {/* Optionally, you can add a message if both links are disabled */}
+                    {!isLiveLinkActive && !isGithubLinkActive && (
+                        <p className={styles.noLinksMessage}>Links not available for this project.</p>
                     )}
                 </div>
 
