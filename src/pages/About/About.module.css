@@ -24,7 +24,9 @@
     gap: 3rem;
     /* Adds space between the profile information and the skills section. */
     max-width: 900px;
-    /* Sets a maximum width for the content wrapper for readability. */
+    /* Sets a maximum width for the content wrapper for readability on large screens. */
+    width: 90%;
+    /* Added: Ensure it takes a percentage of available width */
     margin: 0 auto;
     /* Centers the content wrapper horizontally on the page. */
     background-color: #ffffff;
@@ -35,6 +37,8 @@
     /* Adds a soft, larger shadow for depth. */
     padding: 2.5rem;
     /* Adds padding inside the content wrapper. */
+    box-sizing: border-box;
+    /* Added: Important for consistent padding/width calculations */
 }
 
 .profileInfo {
@@ -70,6 +74,11 @@
     /* Adds space below each bio paragraph. */
     text-align: left;
     /* Aligns the biographical text to the left for standard reading flow. */
+    /* Added: Ensure bio text doesn't overflow horizontally on very small screens */
+    word-wrap: break-word;
+    /* Allows long words to break and wrap */
+    overflow-wrap: break-word;
+    /* Alternative for word-wrap */
 }
 
 .bio:last-child {
@@ -82,32 +91,72 @@
 /* Responsive adjustments for screens up to 768px wide */
 @media (max-width: 768px) {
     .heading {
-        font-size: 2.5rem;
-        /* Reduces the font size of the main heading on smaller screens. */
-        margin-bottom: 2rem;
-        /* Reduces the space below the heading. */
+        font-size: 2.2rem;
+        /* Reduced: Decreases the font size further for smaller screens. */
+        margin-bottom: 1.5rem;
+        /* Reduced: Reduces the space below the heading. */
     }
 
     .contentWrapper {
-        padding: 1.5rem;
-        /* Reduces padding inside the content wrapper. */
-        gap: 2rem;
-        /* Reduces the space between profile info and skills. */
+        padding: 1rem;
+        /* Reduced: Reduces padding inside the content wrapper significantly. */
+        gap: 1.5rem;
+        /* Reduced: Reduces the space between profile info and skills. */
+        width: 95%;
+        /* Increased: Allow it to take up more width on small screens */
     }
 
     .profileImage {
-        width: 150px;
-        /* Reduces the width of the profile image. */
-        height: 150px;
-        /* Reduces the height of the profile image. */
-        margin-bottom: 1.5rem;
-        /* Reduces the space below the profile image. */
+        width: 120px;
+        /* Reduced: Smaller image for mobile. */
+        height: 120px;
+        /* Reduced: Smaller image for mobile. */
+        margin-bottom: 1rem;
+        /* Reduced: Smaller space below the image. */
+        border-width: 3px;
+        /* Reduced: Thinner border for smaller image. */
     }
 
     .bio {
-        font-size: 1rem;
-        /* Reduces the font size of the bio text. */
+        font-size: 0.95rem;
+        /* Slightly reduced: Font size for bio text. */
+        line-height: 1.6;
+        /* Slightly reduced line height for compactness. */
+        margin-bottom: 0.8rem;
+        /* Reduced: Smaller space below each bio paragraph. */
+    }
+
+    .aboutSection {
+        padding: 2rem 0.5rem;
+        /* Adjusts outer padding for very small screens to avoid excessive white space. */
+    }
+}
+
+/* Optional: Even smaller screens (e.g., phones under 480px) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+        /* Even smaller heading on tiny screens */
         margin-bottom: 1rem;
-        /* Reduces the space below each bio paragraph. */
+    }
+
+    .contentWrapper {
+        padding: 0.75rem;
+        /* Even less padding */
+        gap: 1rem;
+        width: 98%;
+        /* Almost full width for content */
+    }
+
+    .profileImage {
+        width: 100px;
+        /* Smallest image size */
+        height: 100px;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+        /* Smallest bio font size */
+        line-height: 1.5;
     }
 }
