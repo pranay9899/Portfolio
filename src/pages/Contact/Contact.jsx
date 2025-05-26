@@ -11,7 +11,7 @@ function Contact() {
     const [mobileCopyStatus, setMobileCopyStatus] = useState('');
 
     const resumePath = `${import.meta.env.BASE_URL}Resume.pdf`;
-    const mobileNumber = "963852741"; // Define mobile number as a constant
+    const mobileNumber = "9346718265";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
